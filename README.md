@@ -21,7 +21,7 @@ MyVertica中文社区说明
  * [知识库(https://community.dev.hpe.com/t5/Vertica-Knowledge-Base/tkb-p/bigdata_wiki_vertica)](https://community.dev.hpe.com/t5/Vertica-Knowledge-Base/tkb-p/bigdata_wiki_vertica)
  * [Marketplace(https://saas.hpe.com/marketplace/big-data#/Home/Show)](https://saas.hpe.com/marketplace/big-data#/Home/Show)
  * [Vertica资源下载百度网盘(http://pan.baidu.com/s/1jXnMu#path=/vertica)](http://pan.baidu.com/s/1jXnMu#path=/vertica)
-
+ * [Vertica csdn专栏(http://blog.csdn.net/column/details/vertica.html)](http://blog.csdn.net/column/details/vertica.html)
 
 常见问题: Vertica 常用问题 Checklists(更新中...)
 ==========
