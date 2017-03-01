@@ -90,6 +90,22 @@ from item;
 (10 rows)
 </code></pre>
 
+以上说明了使用外部函数来实现列转行，如果不适用外部函数是否也可以列转行呢
+<code><pre>
+SELECT node_state,
+    MAX(DECODE(row_number, 1, a.node_name)) ||
+    NVL(MAX(DECODE(row_number, 2, ',' || a.node_name)), '') ||
+    NVL(MAX(DECODE(row_number, 3, ',' || a.node_name)), '') ||
+    NVL(MAX(DECODE(row_number, 4, ',' || a.node_name)), '') ||
+    NVL(MAX(DECODE(row_number, 5, ',' || a.node_name)), '') ||
+    NVL(MAX(DECODE(row_number, 6, ',' || a.node_name)), '')  node_name
+FROM (select node_state,node_name,row_number() over (partition by node_state order by node_name) row_number from nodes) a
+group by node_state;
+
+UP | 
+v_csap_node0001,v_csap_node0002,v_csap_node0003,v_csap_node0004,v_csap_node0005,v_csap_node0006
+STANDBY | v_csap_node007 (2 rows)
+</code></pre>
 
 
 常见问题: 多大的维度表不适合unsegmented？
